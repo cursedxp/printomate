@@ -3,7 +3,7 @@ export type AnchorPint = {
   y: number;
 };
 
-export type PosterSizes = {
+export type PosterSize = {
   id: string;
   name: string;
   width: number;
@@ -11,6 +11,8 @@ export type PosterSizes = {
   unit: "px" | "cm" | "in" | "mm";
   dpi: number;
 };
+
+export type PosterSizes = Record<string, PosterSize[]>;
 
 export type TextBlock = {
   id: string;

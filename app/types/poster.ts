@@ -1,4 +1,4 @@
-export type AnchorPint = {
+export type AnchorPoint = {
   x: number;
   y: number;
 };
@@ -49,7 +49,7 @@ export type ShapeBlock = {
   opacity: number;
   rotation: number;
   scale: number;
-  anchor?: AnchorPint;
+  anchor?: AnchorPoint;
 };
 
 export type ImageBlock = {
@@ -66,7 +66,7 @@ export type ImageBlock = {
   opacity: number;
   rotation: number;
   scale: number;
-  anchor?: AnchorPint;
+  anchor?: AnchorPoint;
 };
 
 export type PosterTemplate = {

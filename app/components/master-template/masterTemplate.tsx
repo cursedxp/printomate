@@ -1,6 +1,5 @@
 import ToolBar from "../toolbar/toolBar";
 import Frame from "./frame";
-import SizeIndicator from "./sizeIndicator";
 
 interface MasterTemplateProps {
   width: number;

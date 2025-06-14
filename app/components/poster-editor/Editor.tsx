@@ -2,9 +2,7 @@
 import { useState, useEffect } from "react";
 import { ImageBlock, ShapeBlock, TextBlock } from "@/app/types/poster";
 import MasterTemplate from "../master-template/masterTemplate";
-import ToolBar from "../toolbar/toolBar";
 import Canvas from "../canvas/canvas";
-import SizeIndicator from "../master-template/sizeIndicator";
 
 interface EditorProps {
   onSave?: (blocks: (TextBlock | ShapeBlock | ImageBlock)[]) => void;

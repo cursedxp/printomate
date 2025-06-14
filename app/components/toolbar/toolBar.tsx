@@ -5,6 +5,7 @@ import {
   IoArrowUndo,
   IoArrowRedo,
 } from "react-icons/io5";
+import { RxText, RxTransform, RxImage } from "react-icons/rx";
 
 import { useState } from "react";
 
@@ -12,7 +13,7 @@ export default function ToolBar() {
   const [selectedBlock, setSelectedBlock] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-col items-center bg-neutral-800 gap-2 pt-2 rounded-l-lg h-fit w-10 ">
+    <div className="flex flex-col items-center bg-neutral-800 gap-2 p-2 rounded-l-lg h-fit w-10 ">
       <button
         onClick={() => {
           setSelectedBlock("TextBlock");
@@ -23,7 +24,7 @@ export default function ToolBar() {
             : "hover:bg-neutral-700/50"
         }`}
       >
-        <IoText className="text-xl" />
+        <RxText className="text-xl" />
       </button>
       <button
         onClick={() => {
@@ -35,7 +36,7 @@ export default function ToolBar() {
             : "hover:bg-neutral-700/50"
         }`}
       >
-        <IoShapesOutline className="text-xl" />
+        <RxTransform className="text-xl" />
       </button>
       <button
         onClick={() => {
@@ -47,13 +48,8 @@ export default function ToolBar() {
             : "hover:bg-neutral-700/50"
         }`}
       >
-        <IoImage className="text-xl" />
+        <RxImage className="text-xl" />
       </button>
-
-      <div className="flex flex-col items-center justify-center gap-2 border-t border-neutral-700 pt-4 pb-4">
-        <IoArrowUndo className="text-xl" />
-        <IoArrowRedo className="text-xl" />
-      </div>
     </div>
   );
 }

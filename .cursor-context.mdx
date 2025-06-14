@@ -1,0 +1,108 @@
+# Printomate - Automated Etsy Poster Generator
+
+## Project Overview
+
+This is a Next.js (TypeScript) web application that generates customizable posters for Etsy sellers. The system allows users to input custom content (names, quotes, dates) and automatically applies it to multiple pre-designed poster layouts in various sizes, outputting a downloadable ZIP archive.
+
+## Tech Stack
+
+- **Frontend**: Next.js 14+ (App Router), TypeScript, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Image Processing**: node-canvas
+- **File Handling**: JSZip
+- **State Management**: React Context/Hooks
+- **Styling**: Tailwind CSS
+
+## Project Structure
+
+```
+printomate/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   ├── components/        # React components
+│   └── lib/              # Utility functions
+├── public/               # Static assets
+└── types/               # TypeScript type definitions
+```
+
+## Key Features
+
+1. Poster Size Management System
+2. Dynamic Poster Rendering Engine
+3. Batch Export with ZIP Packaging
+4. User-friendly Form Interface
+5. Progress Feedback System
+
+## Development Guidelines
+
+### Code Style
+
+- Use TypeScript for all new code
+- Follow functional component patterns
+- Implement proper error handling
+- Use meaningful variable and function names
+- Add JSDoc comments for complex functions
+
+### Performance Considerations
+
+- Optimize image processing operations
+- Implement proper error boundaries
+- Use proper loading states
+- Handle memory efficiently during ZIP creation
+
+### Testing Requirements
+
+- Unit tests for utility functions
+- Integration tests for API routes
+- Component testing for UI elements
+- End-to-end testing for critical flows
+
+## Important Files
+
+- `app/api/generate/route.ts` - Main poster generation endpoint
+- `app/components/PosterForm.tsx` - User input form
+- `app/lib/canvas.ts` - Canvas rendering utilities
+- `app/lib/sizes.ts` - Poster size definitions
+- `app/lib/zip.ts` - ZIP file generation utilities
+
+## Development Workflow
+
+1. Create feature branch from main
+2. Implement changes with tests
+3. Submit PR for review
+4. Merge after approval
+
+## Common Patterns
+
+- Use server components where possible
+- Implement proper loading states
+- Handle errors gracefully
+- Use proper TypeScript types
+- Follow mobile-first responsive design
+
+## Performance Guidelines
+
+- Optimize image processing
+- Implement proper caching
+- Use proper loading states
+- Handle memory efficiently
+- Implement rate limiting
+
+## Security Considerations
+
+- Validate all user inputs
+- Implement proper error handling
+- Use proper authentication
+- Sanitize file names
+- Implement rate limiting
+
+## Notes for AI Assistance
+
+- Focus on TypeScript type safety
+- Prioritize performance in image processing
+- Maintain consistent error handling
+- Follow Next.js best practices
+- Use proper loading states
+- Implement proper validation
+- Follow mobile-first design
+- Use proper testing patterns

@@ -32,6 +32,7 @@ export type TextBlock = {
   opacity: number;
   rotation: number;
   scale: number;
+  lineHeight: number;
 };
 
 export type ShapeBlock = {

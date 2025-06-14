@@ -6,15 +6,15 @@ export default function ToolBar() {
   const [selectedBlock, setSelectedBlock] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-col items-center bg-neutral-800 gap-2 p-2 rounded-l-lg h-fit w-10 ">
+    <div className="flex flex-col items-center bg-neutral-900 gap-2 p-2 rounded-l-lg h-fit w-10 ">
       <button
         onClick={() => {
           setSelectedBlock("TextBlock");
         }}
-        className={`p-1 rounded-lg transition-colors focus:outline-none ${
+        className={`p-1 rounded-md transition-colors focus:outline-none ${
           selectedBlock === "TextBlock"
-            ? "bg-neutral-700 text-white"
-            : "hover:bg-neutral-700/50"
+            ? "bg-white text-black"
+            : "hover:bg-white hover:text-black"
         }`}
       >
         <RxText className="text-xl" />
@@ -23,10 +23,10 @@ export default function ToolBar() {
         onClick={() => {
           setSelectedBlock("ShapeBlock");
         }}
-        className={`p-1 rounded-lg transition-colors focus:outline-none ${
+        className={`p-1 rounded-md transition-colors focus:outline-none ${
           selectedBlock === "ShapeBlock"
-            ? "bg-neutral-700 text-white"
-            : "hover:bg-neutral-700/50"
+            ? "bg-white text-black"
+            : "hover:bg-white hover:text-black"
         }`}
       >
         <RxTransform className="text-xl" />
@@ -35,10 +35,10 @@ export default function ToolBar() {
         onClick={() => {
           setSelectedBlock("ImageBlock");
         }}
-        className={`p-1 rounded-lg transition-colors focus:outline-none ${
+        className={`p-1 rounded-md transition-colors focus:outline-none ${
           selectedBlock === "ImageBlock"
-            ? "bg-neutral-700 text-white"
-            : "hover:bg-neutral-700/50"
+            ? "bg-white text-black"
+            : "hover:bg-white hover:text-black"
         }`}
       >
         <RxImage className="text-xl" />

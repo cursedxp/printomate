@@ -6,7 +6,7 @@ export default function Canvas({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex-1">
       <div
-        className={`flex flex-col items-center bg-neutral-800 w-full h-full ${
+        className={`flex flex-col items-center w-full h-full ${
           selectedBlock === "TextBlock"
             ? "cursor-text"
             : selectedBlock === "ShapeBlock"

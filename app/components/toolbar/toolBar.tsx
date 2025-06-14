@@ -1,10 +1,3 @@
-import {
-  IoText,
-  IoShapesOutline,
-  IoImage,
-  IoArrowUndo,
-  IoArrowRedo,
-} from "react-icons/io5";
 import { RxText, RxTransform, RxImage } from "react-icons/rx";
 
 import { useState } from "react";

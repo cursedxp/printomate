@@ -12,9 +12,6 @@ export default function Editor({ onSave }: EditorProps) {
   const [blocks, setBlocks] = useState<(TextBlock | ShapeBlock | ImageBlock)[]>(
     []
   );
-  const [selectedBlock, setSelectedBlock] = useState<
-    "TextBlock" | "ShapeBlock" | "ImageBlock" | null
-  >(null);
 
   return (
     <div className="flex h-full w-full text-white ">

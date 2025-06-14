@@ -57,7 +57,7 @@ export default function Editor({ onSave }: EditorProps) {
                 min={0}
                 max={100}
                 onChange={(e) => setZoom(parseInt(e.target.value))}
-                className="h-7 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="w-10 h-7 text-center p-1 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none border border-white/20 hover:border-white/40 focus-visible:ring-1 focus-visible:ring-ring"
               />
               <span className="text-sm">%</span>
             </div>

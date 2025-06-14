@@ -1,9 +1,21 @@
 import { RxText, RxTransform, RxImage } from "react-icons/rx";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ToolBar() {
   const [selectedBlock, setSelectedBlock] = useState<string | null>(null);
+
+  useEffect(() => {
+    const pressEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedBlock(null);
+      }
+    };
+    window.addEventListener("keydown", pressEscape);
+    return () => {
+      window.removeEventListener("keydown", pressEscape);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col items-center bg-neutral-900 gap-2 p-2 rounded-l-lg h-fit w-10 ">

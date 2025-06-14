@@ -16,22 +16,6 @@ export default function Editor({ onSave }: EditorProps) {
     "TextBlock" | "ShapeBlock" | "ImageBlock" | null
   >(null);
 
-  useEffect(() => {
-    console.log(selectedBlock);
-  }, [selectedBlock]);
-
-  useEffect(() => {
-    const pressEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setSelectedBlock(null);
-      }
-    };
-    window.addEventListener("keydown", pressEscape);
-    return () => {
-      window.removeEventListener("keydown", pressEscape);
-    };
-  }, []);
-
   return (
     <div className="flex h-full w-full text-white ">
       <Canvas>

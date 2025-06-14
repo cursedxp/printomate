@@ -9,8 +9,7 @@ interface MasterTemplateProps {
 
 export default function MasterTemplate({ width, height }: MasterTemplateProps) {
   return (
-    <div className="relative">
-      <SizeIndicator width={width} height={height} name="2x3" dpi={300} />
+    <div className="mt-4">
       <div className="flex">
         <ToolBar />
         <Frame width={width} height={height} />

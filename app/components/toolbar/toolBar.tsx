@@ -1,6 +1,7 @@
 import { RxText, RxTransform, RxImage } from "react-icons/rx";
 
 import { useState, useEffect } from "react";
+import ToolBarButton from "./toolBarButton";
 
 export default function ToolBar() {
   const [selectedBlock, setSelectedBlock] = useState<string | null>(null);
@@ -19,42 +20,30 @@ export default function ToolBar() {
 
   return (
     <div className="flex flex-col items-center bg-neutral-900 gap-2 p-2 rounded-l-lg h-fit w-10 ">
-      <button
+      <ToolBarButton
+        icon={<RxText className="text-xl" />}
         onClick={() => {
           setSelectedBlock("TextBlock");
         }}
-        className={`p-1 rounded-md transition-colors focus:outline-none ${
-          selectedBlock === "TextBlock"
-            ? "bg-white text-black"
-            : "hover:bg-white hover:text-black"
-        }`}
-      >
-        <RxText className="text-xl" />
-      </button>
-      <button
+        selectedBlock={selectedBlock}
+        blockType="TextBlock"
+      />
+      <ToolBarButton
+        icon={<RxTransform className="text-xl" />}
         onClick={() => {
           setSelectedBlock("ShapeBlock");
         }}
-        className={`p-1 rounded-md transition-colors focus:outline-none ${
-          selectedBlock === "ShapeBlock"
-            ? "bg-white text-black"
-            : "hover:bg-white hover:text-black"
-        }`}
-      >
-        <RxTransform className="text-xl" />
-      </button>
-      <button
+        selectedBlock={selectedBlock}
+        blockType="ShapeBlock"
+      />
+      <ToolBarButton
+        icon={<RxImage className="text-xl" />}
         onClick={() => {
           setSelectedBlock("ImageBlock");
         }}
-        className={`p-1 rounded-md transition-colors focus:outline-none ${
-          selectedBlock === "ImageBlock"
-            ? "bg-white text-black"
-            : "hover:bg-white hover:text-black"
-        }`}
-      >
-        <RxImage className="text-xl" />
-      </button>
+        selectedBlock={selectedBlock}
+        blockType="ImageBlock"
+      />
     </div>
   );
 }
